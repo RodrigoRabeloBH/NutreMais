@@ -3,10 +3,10 @@
 }
 
 body {
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
-span {
+.logo {
     margin-left: 20px;
     color: #ffff00;
     font-size: 1.8rem;

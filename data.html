@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>NutriMais</title>
+</head>
+
+<body class="">
+    <!--Header-->
+    <div class="navbar-fixed scrollspy" id="home">
+        <div class="nav-wrapper">
+            <nav class="blue-grey darken-4">
+                <a href="index.html">
+                    <span class="logo">Nutri</span> <i class="fas fa-plus"></i>
+                </a>
+                <a href="#" class="sidenav-trigger" data-target="mobile-sidenav"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="create.html">Sing In</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!--SideNav-->
+    <ul class="sidenav grey darken-3" id="mobile-sidenav">
+        <li>
+            <a href="index.html" class="yellow-text"><i class="material-icons white-text">home</i>Home</a></li>
+        <li>
+            <a href="create.html" class="yellow-text"> <i class="material-icons white-text">assignment</i>Sing In</a>
+        </li>
+        <li>
+            <a href="login.html" class="yellow-text"><i class="material-icons white-text">account_circle</i>Login</a>
+        </li>
+    </ul>
+    <!--Created Form-->
+    <div class="container">
+        <div class="row">
+            <h4>Cálculo Calórico</h4>
+            <form id="myForm">
+                <div class="col s12">
+                    <div class="input-field inline">
+                        <input type="text" id="peso" required class="validate">
+                        <label for="peso">Peso: </label>
+                    </div>
+                    <div class="input-field inline">
+                        <input type="text" id="altura" required class="validate">
+                        <label for="altura">Altura: </label>
+                    </div>
+                    <div class="input-field inline">
+                        <input type="text" id="idade" required class="validate">
+                        <label for="idade">Idade: </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <h6>Nível de Atividade Física:</h6>
+                    <div class="col s12 m6">
+                        <p>
+                            <label>
+                                <input type="checkbox" class="check" id="sedentario" value="1.2" />
+                                <span>Prática desportiva 0-0 dias/semana</span>
+                            </label>
+                        </p>
+                    </div>
+                    <div class="col s12 m6">
+                        <p>
+                            <label>
+                                <input type="checkbox" class="check" id="leve" value="1.375" />
+                                <span>Prática desportiva 1-3 dias/semana </span>
+                            </label>
+                        </p>
+                    </div>
+                    <div class="col s12 m6">
+                        <p>
+                            <label>
+                                <input type="checkbox" class="check" id="medio" value="1.550" />
+                                <span>Prática desportiva 3-5 dias/semana</span>
+                            </label>
+                        </p>
+                    </div>
+                    <div class="col s12 m6">
+                        <p>
+                            <label>
+                                <input type="checkbox" class="check" id="intenso" value="1.725" />
+                                <span>Prática desportiva 6-7 dias/semana </span>
+                            </label>
+                        </p>
+                    </div>
+                    <div class="col s12">
+                        <h6>Sexo</h6>
+                        <label class="">
+                            <input type="radio" class="sexo" name="group1" id="homem" value="homem" required checked />
+                            <span>Masculino</span>
+                        </label>
+                        <label class="">
+                            <input type="radio" class="sexo" name="group1" id="mulher" value="mulher" required />
+                            <span>Feminino</span>
+                        </label>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <button class="calc waves-effect waves-light grey darken-4 btn-small" type="submit">Submit
+                                <i class="material-icons right">send</i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="result">
+            <h5>O seu metabolismo de base é: <span id="place1"></span></h5>
+            <hr>
+            <p class="lead">
+                O metabolismo de base corresponde às necessidades energéticas do seu corpo em repouso, ou seja, quando
+                não
+                pratica desporto ou qualquer atividade em particular. Corresponde à quantidade mínima de calorias de que
+                o
+                seu corpo necessita para funcionar sem atividade. Um metabolismo de base elevado significa que o seu
+                corpo
+                queima uma grande quantidade de calorias em repouso. É o caso, por exemplo, das pessoas bastante jovens,
+                porque quanto mais jovem for, menos reservas o corpo armazena. Nunca deverá ter um número de calorias
+                diárias inferior ao seu metabolismo de base.
+            </p>
+            <hr>
+            <h5>O peso ideal é: <span id="place2"></span></h5>
+            <p class="lead">
+                O peso ideal é calculado em função da sua altura, da sua idade e do seu sexo. Corresponde ao peso com o
+                qual
+                se vai sentir melhor, ou seja, aquele em que a sua condição física será melhor e em que as doenças
+                ligadas
+                aos problemas de peso se desenvolvem menos. Graças ao nosso simulador, pode descobrir e definir os seus
+                objetivos. Escolha o IMC que deseja alcançar, para descobrir qual o peso que deverá perder. O nosso
+                simulador não substitui o diagnóstico de um profissional de saúde. Não hesite em consultar um
+                nutricionista
+                na sua procura do seu peso ideal.
+            </p>
+            <div class="row">
+                <div class="input-field col s12">
+                    <a href="#" class=" voltar btn waves-effect waves-light grey darken-4 btn-small" >Voltar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="Js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>    
+    <script src="Js/slide.js"></script>
+</body>
+
+</html>
