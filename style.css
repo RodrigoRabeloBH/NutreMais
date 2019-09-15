@@ -1,0 +1,21 @@
+#navbar {
+    background: #263238 !important;
+}
+
+body {
+    overflow: hidden;
+}
+
+span {
+    margin-left: 20px;
+    color: #ffff00;
+    font-size: 1.8rem;
+}
+
+.fas, a {
+    color: #81c784;
+}
+
+a:hover {
+    color: #ffff8d;
+}
