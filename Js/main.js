@@ -52,7 +52,7 @@ class Person {
                 result.style.display = 'block';
             } else {
                 const f = [665.1 + (1.8 * user.altura) + (9.5 * user.peso) - (4.7 * user.idade)] * (valCheck);
-                const pf = 0.0019 * Math.pow(user.altura, 2);
+                const pf = 0.0022 * Math.pow(user.altura, 2);
                 document.querySelector('#place1').textContent = f.toFixed(2);
                 document.querySelector('#place2').textContent = pf.toFixed(2);
                 result.style.display = 'block';
