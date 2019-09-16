@@ -70,3 +70,7 @@ document.querySelector('.voltar').addEventListener('click', ()=>{
     Person.ClearField();
     window.location.reload();
 });
+
+const x = JSON.parse(localStorage.getItem('key'));
+console.log(x);
+document.querySelector('#user').textContent = x.username;
