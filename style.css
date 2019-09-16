@@ -19,3 +19,6 @@ body {
 a:hover {
     color: #ffff8d;
 }
+p{
+    text-align: justify;
+}
