@@ -1,10 +1,4 @@
-	const master = {
-	username: 'Master',
-	password: '1q2w3e4r',
-	phone: '(31) 9 9947-4172',
-	email: 'master@email.com'
-}
-localStorage.setItem('key', JSON.stringify(master));
+
 
 document.querySelector('.btn').addEventListener('click', auth);
 
