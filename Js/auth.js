@@ -1,14 +1,5 @@
 document.querySelector('.btn').addEventListener('click', auth);
 
-class Users {
-    constructor(username, password, email, phone) {
-        this.username = username;
-        this.password = password;
-        this.phone = phone;
-        this.email = email;
-    }
-}
-const data = [];
 
 function auth(e) {
 
@@ -17,9 +8,23 @@ function auth(e) {
     const phone = document.querySelector('#phone').value;
     const email = document.querySelector('#email').value;
 
-    const user = new Users(user_name, password, email,phone);
-    data.push(user);
-    localStorage.setItem('key', JSON.stringify(user));
+    const obj = {
+	username: user_name,
+	password: password,
+	phone: phone,
+	email: email
+}
+
+    if(localStorage.getItem('key') === null){
+	const data = [];
+	data.push(obj);
+	localStorage.setItem('key', JSON.stringify(data));
+
+}else{
+	const data = JSON.parse(localStorage.getItem('key'));
+	data.push(obj);
+	localStorage.setItem('key', JSON.stringify(data));
+}    
 
     // e.preventDefault();
 }
