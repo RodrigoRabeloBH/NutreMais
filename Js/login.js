@@ -1,3 +1,5 @@
+M.AutoInit();
+
 const base = [];
 const obj = JSON.parse(localStorage.getItem('key'));
 base.push(obj);

@@ -1,3 +1,5 @@
+M.AutoInit();
+
 const result = document.querySelector('.result');
 result.style.display = 'none';
 

@@ -1,3 +1,5 @@
+M.AutoInit();
+
 document.querySelector('.btn').addEventListener('click', auth);
 
 function auth(e) {
