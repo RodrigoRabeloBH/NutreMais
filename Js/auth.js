@@ -1,13 +1,5 @@
 document.querySelector('.btn').addEventListener('click', auth);
 
-class Users {
-    constructor(username, password, email, phone) {
-        this.username = username;
-        this.password = password;
-        this.phone = phone;
-        this.email = email;
-    }
-}
 function auth(e) {
 
     const user_name = document.querySelector('#first_name').value;
@@ -15,7 +7,12 @@ function auth(e) {
     const phone = document.querySelector('#phone').value;
     const email = document.querySelector('#email').value;
 
-    const user = new Users(user_name, password, email,phone);
+    const user = {
+        username: user_name,
+        password: password,
+        email: email,
+        phone: phone
+    };   
     
     localStorage.setItem('key', JSON.stringify(user));
 
