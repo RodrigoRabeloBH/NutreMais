@@ -6,10 +6,10 @@ result.style.display = 'none';
 class Person {
     constructor(peso, idade, altura) {
         this.idade = idade,
-            this.peso = peso,
-            this.altura = altura
+        this.peso = peso,
+        this.altura = altura
     }
-    static ClearField(){
+    static ClearField() {
         const peso = document.querySelector('#peso').value = '';
         const altura = document.querySelector('#altura').value = '';
         const idade = document.querySelector('#idade').value = '';
@@ -20,6 +20,7 @@ class Person {
         const peso = document.querySelector('#peso').value;
         const altura = document.querySelector('#altura').value;
         const idade = document.querySelector('#idade').value;
+       
 
         if (peso === '' || isNaN(peso)) {
             alert('O campo peso deve estar devidamente preenchido');
@@ -68,7 +69,7 @@ document.querySelector('.calc').addEventListener('click', (e) => {
     e.preventDefault();
 });
 
-document.querySelector('.voltar').addEventListener('click', ()=>{
+document.querySelector('.voltar').addEventListener('click', () => {
     Person.ClearField();
     window.location.reload();
 });
